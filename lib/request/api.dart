@@ -10,7 +10,7 @@ class Api {
   /// 图标作者
   static const String iconUrl = "https://www.pixiv.net/users/66219277";
   /// 规则仓库
-  static const String pluginShop = 'https://raw.githubusercontent.com/Predidit/KazumiRules/main/';
+  static const String pluginShop = 'https://raw.githubusercontent.com/aichenovo/Rules/main/';
   /// 在线升级
   static const String latestApp =
       'https://api.github.com/repos/Predidit/Kazumi/releases/latest'; 
