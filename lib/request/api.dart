@@ -52,11 +52,13 @@ class Api {
   static const String bangumiStaffByIDNext = '/p1/subjects/{0}/staffs/persons';
 
   /// DanDanPlay API Domain
-  static const String dandanAPIDomain = 'https://api.dandanplay.net';
+  static const String dandanAPIDomain = 'https://paejay.asia/';
   /// 获取弹幕
   static const String dandanAPIComment = "/api/v2/comment/";
   /// 检索弹弹番剧元数据
   static const String dandanAPISearch = "/api/v2/search/anime";
+  ///搜剧集
+  static const String dandanAPISearch = "/api/v2/search/episodes";
   /// 获取弹弹番剧元数据
   static const String dandanAPIInfo = "/api/v2/bangumi/";
   /// 获取弹弹番剧元数据（通过BGM番剧ID）
