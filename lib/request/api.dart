@@ -10,7 +10,7 @@ class Api {
   /// 图标作者
   static const String iconUrl = "https://t.me/wlsad";
   /// 规则仓库
-  static const String pluginShop = 'https://raw.githubusercontent.com/aichenovo/Rules/main/index.json';
+  static const String pluginShop = 'https://raw.githubusercontent.com/aichenovo/Rules/main';
   /// 在线升级
   static const String latestApp =
       ''; 
