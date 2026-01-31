@@ -90,7 +90,7 @@ const List<String> acceptLanguageList = [
 /// Bangumi API 文档要求的UA格式
 Map<String, String> bangumiHTTPHeader = {
   'user-agent':
-      'Aura/${Api.version} (Android)',
+      'Sad/${Api.version} (Android)',
   'referer': '',
   'content-type': 'application/json'
 };
