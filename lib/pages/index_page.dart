@@ -28,7 +28,7 @@ class _IndexPageState extends State<IndexPage> {
     try {
       // 注意：GitHub 直接读取 raw 内容（blob 页面是网页，raw 才是纯文本）
       // 把 blob 替换为 raw，去掉浏览器渲染相关的内容
-      final url = Uri.parse("https://raw.githubusercontent.com/aichenovo/aichen/main/notice");
+      final url = Uri.parse("https://raw.githubusercontent.com/aichenovo/Rules/main/gg");
       final response = await http.get(url);
 
       // 请求成功（状态码 200）
@@ -52,7 +52,7 @@ class _IndexPageState extends State<IndexPage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('【公告】'),
+        title: const Text('公告栏'),
         // 用 SingleChildScrollView 包裹，避免内容过多溢出
         content: SingleChildScrollView(
           child: Text(_noticeContent),
@@ -60,7 +60,7 @@ class _IndexPageState extends State<IndexPage> {
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text('我知道了'),
+            child: const Text('我已知晓'),
           ),
         ],
       ),
