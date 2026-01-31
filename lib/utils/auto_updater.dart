@@ -762,7 +762,7 @@ class AutoUpdater {
     } else if (Platform.isAndroid) {
       extension = '.apk';
     }
-    return 'Aura-$version$extension';
+    return 'Sad-$version$extension';
   }
 
   /// 从 assets 中获取文件的哈希值
