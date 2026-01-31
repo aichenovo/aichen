@@ -142,7 +142,7 @@ class _DanmakuSettingsPageState extends State<DanmakuSettingsPage> {
                         danmakuBiliBiliSource);
                     setState(() {});
                   },
-                  title: Text('BiliBili', style: TextStyle(fontFamily: fontFamily)),
+                  title: Text('开启弹幕', style: TextStyle(fontFamily: fontFamily)),
                   initialValue: danmakuBiliBiliSource,
                 ),
                 SettingsTile.switchTile(
@@ -162,7 +162,7 @@ class _DanmakuSettingsPageState extends State<DanmakuSettingsPage> {
                         SettingBoxKey.danmakuDanDanSource, danmakuDanDanSource);
                     setState(() {});
                   },
-                  title: Text('DanDan', style: TextStyle(fontFamily: fontFamily)),
+                  title: Text('LogVar', style: TextStyle(fontFamily: fontFamily)),
                   initialValue: danmakuDanDanSource,
                 ),
               ],
