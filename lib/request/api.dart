@@ -52,7 +52,7 @@ class Api {
   static const String bangumiStaffByIDNext = '/p1/subjects/{0}/staffs/persons';
 
   /// DanDanPlay API Domain
-  static const String dandanAPIDomain = 'https://api.dandanplay.net';
+  static const String dandanAPIDomain = 'https://danmuapi.vercel.app';
   /// 获取弹幕
   static const String dandanAPIComment = "/api/v2/comment/";
   /// 检索弹弹番剧元数据
