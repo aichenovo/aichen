@@ -161,23 +161,23 @@ class _AboutPageState extends State<AboutPage> {
                     launchUrl(Uri.parse(Api.projectUrl),
                         mode: LaunchMode.externalApplication);
                   },
-                  title: Text('项目主页', style: TextStyle(fontFamily: fontFamily)),
+                  title: Text('未开放', style: TextStyle(fontFamily: fontFamily)),
                 ),
                 SettingsTile.navigation(
                   onPressed: (_) {
                     launchUrl(Uri.parse(Api.sourceUrl),
                         mode: LaunchMode.externalApplication);
                   },
-                  title: Text('代码仓库', style: TextStyle(fontFamily: fontFamily)),
-                  value: Text('Github', style: TextStyle(fontFamily: fontFamily)),
+                  title: Text('未开放', style: TextStyle(fontFamily: fontFamily)),
+                  value: Text('', style: TextStyle(fontFamily: fontFamily)),
                 ),
                 SettingsTile.navigation(
                   onPressed: (_) {
                     launchUrl(Uri.parse(Api.iconUrl),
                         mode: LaunchMode.externalApplication);
                   },
-                  title: Text('图标创作', style: TextStyle(fontFamily: fontFamily)),
-                  value: Text('Pixiv', style: TextStyle(fontFamily: fontFamily)),
+                  title: Text('问题反馈', style: TextStyle(fontFamily: fontFamily)),
+                  value: Text('tg:wlsad', style: TextStyle(fontFamily: fontFamily)),
                 ),
                 SettingsTile.navigation(
                   onPressed: (_) {
@@ -185,7 +185,7 @@ class _AboutPageState extends State<AboutPage> {
                         mode: LaunchMode.externalApplication);
                   },
                   title: Text('内容索引', style: TextStyle(fontFamily: fontFamily)),
-                  value: Text('Bangumi', style: TextStyle(fontFamily: fontFamily)),
+                  value: Text('tmdb', style: TextStyle(fontFamily: fontFamily)),
                 ),
                 SettingsTile.navigation(
                   onPressed: (_) {
@@ -193,8 +193,8 @@ class _AboutPageState extends State<AboutPage> {
                         mode: LaunchMode.externalApplication);
                   },
                   title: Text('弹幕来源', style: TextStyle(fontFamily: fontFamily)),
-                  description: Text('ID: ${mortis['id']}', style: TextStyle(fontFamily: fontFamily)),
-                  value: Text('DanDanPlay', style: TextStyle(fontFamily: fontFamily)),
+                  description: Text('github', style: TextStyle(fontFamily: fontFamily)),
+                  value: Text('LogVar', style: TextStyle(fontFamily: fontFamily)),
                 ),
               ],
             ),
