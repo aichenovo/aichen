@@ -102,7 +102,7 @@ class _AppWidgetState extends State<AppWidget>
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Text('您想要退出 Aura 吗？'),
+                const Text('您要退出 Sad 吗？'),
                 const SizedBox(height: 24),
                 StatefulBuilder(builder: (context, setState) {
                   onChanged(value) {
@@ -129,7 +129,7 @@ class _AppWidgetState extends State<AppWidget>
                     }
                     exit(0);
                   },
-                  child: const Text('退出 Aura')),
+                  child: const Text('退出 Sad')),
               TextButton(
                   onPressed: () async {
                     if (saveExitBehavior) {
@@ -173,13 +173,13 @@ class _AppWidgetState extends State<AppWidget>
     }
 
     if (!Platform.isLinux) {
-      await trayManager.setToolTip('Aura');
+      await trayManager.setToolTip('Sad');
     }
 
     Menu trayMenu = Menu(items: [
       MenuItem(key: 'show_window', label: '显示窗口'),
       MenuItem.separator(),
-      MenuItem(key: 'exit', label: '退出 Aura')
+      MenuItem(key: 'exit', label: '退出 Sad')
     ]);
     await trayManager.setContextMenu(trayMenu);
   }
@@ -268,7 +268,7 @@ class _AppWidgetState extends State<AppWidget>
           );
         }
         return MaterialApp.router(
-          title: "Aura",
+          title: "Sad",
           localizationsDelegates: GlobalMaterialLocalizations.delegates,
           supportedLocales: const [
             Locale.fromSubtags(
