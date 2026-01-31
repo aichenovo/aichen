@@ -21,6 +21,7 @@ import 'package:kazumi/utils/tmdb_migration.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   MediaKit.ensureInitialized();
+
   if (Platform.isAndroid || Platform.isIOS) {
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -62,8 +63,10 @@ void main() async {
         }));
     return;
   }
+
   bool showWindowButton = await GStorage.setting
       .get(SettingBoxKey.showWindowButton, defaultValue: false);
+
   if (Utils.isDesktop()) {
     await windowManager.ensureInitialized();
     bool isLowResolution = await Utils.isLowResolution();
@@ -85,10 +88,12 @@ void main() async {
       await windowManager.focus();
     });
   }
+
   Request();
   await Request.setCookie();
   ProxyManager.applyProxy();
   Future.microtask(() => TmdbMigration.migrateIfNeeded());
+
   runApp(
     ChangeNotifierProvider(
       create: (_) => ThemeProvider(),
@@ -98,4 +103,43 @@ void main() async {
       ),
     ),
   );
+
+  // 在 App 第一帧渲染完成后显示欢迎公告弹窗
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    // 如果想改为“只首次显示”，可以取消下面注释，使用 Hive 判断
+    // bool isFirstLaunch = GStorage.setting.get(SettingBoxKey.isFirstLaunch, defaultValue: true) ?? true;
+    // if (!isFirstLaunch) return;
+
+    final context = Modular.navigatorKey.currentContext;
+    if (context == null || !context.mounted) return;
+
+    showDialog(
+      context: context,
+      barrierDismissible: true, // 点击弹窗外部可关闭
+      builder: (BuildContext dialogContext) {
+        return AlertDialog(
+          title: const Text('欢迎使用 Aura'),
+          content: const Text(
+            '欢迎来到 Aura！\n\n'
+            '这是一个基于自定义规则的视频/番剧采集播放工具。\n'
+            '在这里你可以自由探索各种资源，享受追剧的乐趣～\n\n'
+            '祝你使用愉快！有任何问题或建议，欢迎随时反馈。',
+            style: TextStyle(height: 1.5),
+          ),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(dialogContext).pop();
+                // 如果想只首次显示，设置标志位（配合上面注释的判断）
+                // GStorage.setting.put(SettingBoxKey.isFirstLaunch, false);
+              },
+              child: const Text('好的，知道了！'),
+            ),
+          ],
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          contentPadding: const EdgeInsets.fromLTRB(24, 20, 24, 12),
+        );
+      },
+    );
+  });
 }
