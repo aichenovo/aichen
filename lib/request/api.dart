@@ -1,25 +1,25 @@
 class Api {
   /// 当前版本
-  static const String version = '1.9.4';
+  static const String version = '0.0.1';
   /// 规则API级别
   static const int apiLevel = 5;
   /// 项目主页
-  static const String projectUrl = "https://kazumi.app/";
+  static const String projectUrl = "";
   /// Github 项目主页
-  static const String sourceUrl = "https://github.com/Predidit/Kazumi";
+  static const String sourceUrl = "";
   /// 图标作者
-  static const String iconUrl = "https://www.pixiv.net/users/66219277";
+  static const String iconUrl = "https://t.me/wlsad";
   /// 规则仓库
-  static const String pluginShop = 'https://raw.githubusercontent.com/Predidit/KazumiRules/main/';
+  static const String pluginShop = 'https://raw.githubusercontent.com/aichenovo/Rules/main/index.json';
   /// 在线升级
   static const String latestApp =
-      'https://api.github.com/repos/Predidit/Kazumi/releases/latest'; 
+      ''; 
   /// Github镜像
   static const String gitMirror = 'https://ghfast.top/';
   /// 弹弹官网
-  static const String dandanIndex = 'https://www.dandanplay.com/';
+  static const String dandanIndex = 'https://github.com/huangxd-/danmu_api';
   /// Bangumi 官网
-  static const String bangumiIndex = 'https://bangumi.tv/';
+  static const String bangumiIndex = 'https://www.themoviedb.org/';
 
   /// bangumi API Domain
   static const String bangumiAPIDomain = 'https://api.bgm.tv';
