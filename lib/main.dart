@@ -76,7 +76,7 @@ void main() async {
           ? TitleBarStyle.hidden
           : TitleBarStyle.normal,
       windowButtonVisibility: showWindowButton,
-      title: 'Aura',
+      title: 'Sad',
     );
     windowManager.waitUntilReadyToShow(windowOptions, () async {
       // Native window show has been blocked in `flutter_windows.cppL36` to avoid flickering.
