@@ -88,7 +88,7 @@ class _ScaffoldMenu extends State<ScaffoldMenu> {
                   NavigationDestination(
                     selectedIcon: Icon(Icons.settings),
                     icon: Icon(Icons.settings),
-                    label: '我的',
+                    label: '设置',
                   ),
                 ],
                 selectedIndex: state.selectedIndex,
@@ -138,7 +138,7 @@ class _ScaffoldMenu extends State<ScaffoldMenu> {
                   NavigationRailDestination(
                     selectedIcon: Icon(Icons.settings),
                     icon: Icon(Icons.settings_outlined),
-                    label: Text('我的'),
+                    label: Text('设置'),
                   ),
                 ],
                 selectedIndex: state.selectedIndex,
