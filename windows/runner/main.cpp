@@ -25,7 +25,7 @@ constexpr const wchar_t kWindowClassName[] = L"FLUTTER_RUNNER_WIN32_WINDOW";
 bool ActivateExistingWindow()
 {
   // Find the existing window by class name
-  HWND hwnd = ::FindWindow(kWindowClassName, L"Aura");
+  HWND hwnd = ::FindWindow(kWindowClassName, L"Sad");
   if (hwnd != NULL)
   {
     // Check if window is hidden (e.g., minimized to tray)
@@ -63,7 +63,7 @@ bool isSingleInstance()
   {
     return true;
   }
-  std::wstring mutex_str = L"aura.win.mutex";
+  std::wstring mutex_str = L"sad.win.mutex";
   mutex = ::CreateMutex(NULL, TRUE, mutex_str.c_str());
   if (mutex == NULL || GetLastError() == ERROR_ALREADY_EXISTS)
   {
