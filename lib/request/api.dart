@@ -60,7 +60,7 @@ class Api {
   /// 获取弹弹番剧元数据
   static const String dandanAPIInfo = "/api/v2/bangumi/";
   /// 获取弹弹番剧元数据（通过BGM番剧ID）
-  static const String dandanAPIInfoByBgmBangumiId = "/api/v2/bangumi/{0}";
+  static const String dandanAPIInfoByBgmBangumiId = "/api/v2/bangumi/bgmtv/{0}";
 
   /// TMDB API Domain
   static const String tmdbAPIDomain = 'https://api.themoviedb.org';
